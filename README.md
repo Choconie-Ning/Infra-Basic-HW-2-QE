@@ -16,12 +16,28 @@ MPI Fortran compiler
 
 BLAS, LAPACK, MPI, and other available numerical libraries are detected by the Quantum ESPRESSO configure system.
 
+For example, Intel oneAPI and Intel MPI on NCHC F1:
+```bash
+module purge
+module load intel/2024_01_46
+```
+
+GCC + OpenMPI:
+```bash
+module purge
+module load gcc/11.2.0
+module load openmpi/4.1.6
+```
+
 ## Installation
 
 ```bash
 git clone https://github.com/Choconie-Ning/Infra-Basic-HW-2-QE.git
-./Infra-Basic-HW-2-QE/install.sh
+CC=mpiicx MPIF90=mpiifx ./Infra-Basic-HW-2-QE/install.sh
 ```
+
+For GCC + OpenMPI:
+`CC=mpicc MPIF90=mpif90 ./Infra-Basic-HW-2-QE/install.sh`
 
 The script installs Quantum ESPRESSO into:`install/qe-7.6/`.
 
