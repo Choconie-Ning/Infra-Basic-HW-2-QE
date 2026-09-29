@@ -41,29 +41,6 @@ For GCC + OpenMPI:
 
 The script installs Quantum ESPRESSO into:`install/qe-7.6/`.
 
-## Toolchain 
-
-Load a compiler and MPI environment before running `install.sh`.
-
-For example, Intel oneAPI and Intel MPI on NCHC F1:
-
-```bash
-module purge
-module load intel/2024_01_46
-
-CC=mpiicx MPIF90=mpiifx ./install.sh
-```
-
-GCC + OpenMPI:
-
-```bash
-module purge
-module load gcc/11.2.0
-module load openmpi/4.1.6
-
-CC=mpicc MPIF90=mpif90 ./install.sh
-```
-
 ## Options
 
 ```
